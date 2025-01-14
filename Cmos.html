@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CMOS - Student Portfolio</title>
+    <style>
+      /* General Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Roboto", Arial, sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+        scroll-behavior: smooth;
+      }
+
+      /* Header */
+      header {
+        height: 200px;
+        background: url(./cmosimage.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        color: #fff;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+      }
+
+      .navbar {
+        display: flex;
+        gap: 15px;
+      }
+
+      .navbar a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.2rem;
+      }
+
+      .navbar a:hover {
+        text-decoration: underline;
+      }
+
+      /* Section Styling */
+      section {
+        padding: 30px 20px;
+      }
+
+      h2 {
+        font-size: 2.5rem;
+        color: #4b0082;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      h3 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+      }
+
+      p,
+      ul {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+
+      ul li {
+        margin-bottom: 10px;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        margin: 10px 5px;
+        font-size: 1rem;
+      }
+
+      .btn:hover {
+        background: #0056b3;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 20px auto;
+        border-radius: 10px;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        background: #333;
+        color: #fff;
+        font-size: 1rem;
+      }
+
+      .about-course {
+        background-color: #4b0082;
+      }
+
+      .about-course h2 {
+        color: #f9f9f9;
+      }
+
+      #about-course {
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div>
+        <h1>CMOS Technology</h1>
+      </div>
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="#about-course">About</a>
+        <a href="#course-project">Project</a>
+      </nav>
+    </header>
+
+    <!-- About the Course Section -->
+    <section id="about-course">
+      <div class="about-course">
+        <h2>About the Course</h2>
+      </div>
+      <p>
+        CMOS (Complementary Metal-Oxide-Semiconductor) is a key technology in
+        the design and development of integrated circuits. This course covers
+        the fundamental principles of CMOS technology, its uses, and real-world
+        applications.
+      </p>
+      <h3>Applications:</h3>
+      <ul>
+        <li>Microprocessors and digital logic circuits</li>
+        <li>Memory devices like SRAM and DRAM</li>
+        <li>Analog circuits, including amplifiers and oscillators</li>
+        <li>Image sensors and digital cameras</li>
+      </ul>
+    </section>
+
+    <!-- Course Project Section -->
+    <section id="course-project">
+      <div class="about-course">
+        <h2>Course Project</h2>
+      </div>
+      <h3>Problem Statement</h3>
+      <p>
+        Design and Implementation of 1-bit Comparator using fully CMOS and
+        Pseudo NMOS logic.
+      </p>
+
+      <div style="text-align: center; margin-top: 20px">
+        <a
+          href="/portfoilo/CMOS_VLSI_Circuits_Lab[1]  -  Read-Only.pdf"
+          target="_blank"
+          class="btn"
+          >Open PPT</a
+        >
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DSP - Student Portfolio</title>
+    <style>
+      /* General Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Roboto", Arial, sans-serif;
+        line-height: 1.6;
+        background-color: whitesmoke; /* Updated background color to light peach */
+        color: #333;
+        scroll-behavior: smooth;
+      }
+
+      /* Header */
+      header {
+        position: relative;
+        margin-bottom: 0%;
+        top: 0;
+        width: 100%;
+        height: 200px; /* Increased height for the header */
+        background: linear-gradient(
+            90deg,
+            rgba(79, 172, 254, 0.8),
+            rgba(0, 242, 254, 0.8)
+          ),
+          url(./v617batch2-kul-24-technology_1.webp);
+        background-size: cover; /* Ensures the image spans the full width */
+        background-repeat: no-repeat; /* Prevents image repetition */
+        background-position: center; /* Centers the image */
+        color: whitesmoke;
+        padding: 15px 20px;
+        z-index: 1000;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      /* Add padding to body */
+      header h1 {
+        font-size: 3rem; /* Increased font size */
+        font-weight: bold;
+      }
+
+      .navbar {
+        display: flex;
+        gap: 20px;
+      }
+
+      .navbar a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.4rem; /* Increased font size */
+        font-weight: bold;
+        transition: color 0.3s ease-in-out;
+      }
+
+      .navbar a:hover {
+        color: #f9f9f9;
+        text-decoration: underline;
+      }
+
+      /* Section Styling */
+      section {
+        padding: 30px 60px; /* Increased padding */
+        margin: 20px 0;
+        margin-top: 0; /* Ensures no margin is added to the top */
+        width: 100%; /* Full width */
+        background: whitesmoke; /* Light peach background for sections */
+      }
+
+      /* Centered Div for "About the Course" */
+      #dsp .about-course {
+        text-align: center;
+        margin-bottom: 50px; /* Increased bottom margin */
+
+        width: 100%;
+        height: 100%;
+      }
+
+      #dsp .about-course h2 {
+        font-size: 3.5rem; /* Increased heading size */
+        color: white;
+
+        font-weight: bold;
+        margin-bottom: 30px;
+      }
+
+      #dsp .about-course p {
+        font-size: 1.5rem; /* Increased font size */
+        line-height: 1.8;
+        color: #444;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      /* Headings Styling */
+      h2 {
+        color: white;
+        font-size: 3rem; /* Increased font size */
+        font-weight: bold;
+        margin-bottom: 25px;
+        text-align: center;
+      }
+
+      h3 {
+        color: #4b0082;
+        font-size: 2rem; /* Increased font size */
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+
+      /* Paragraph and List Styling */
+      p {
+        margin-bottom: 20px;
+        line-height: 1.8;
+        font-size: 1.5rem; /* Increased font size */
+      }
+
+      ul {
+        list-style-type: square;
+        margin: 10px 0 20px 20px;
+        color: #333;
+        font-size: 1.3rem; /* Increased font size */
+        line-height: 1.8;
+      }
+
+      /* Buttons */
+      .btn {
+        display: inline-block;
+        margin: 10px 5px;
+        padding: 14px 30px; /* Increased button padding */
+        background: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        font-size: 1.4rem; /* Increased font size */
+        font-weight: bold;
+        transition: background 0.3s, transform 0.2s;
+      }
+
+      .btn:hover {
+        background: #0056b3;
+        transform: translateY(-3px);
+      }
+
+      /* Images */
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 20px auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 20px;
+        background: #333;
+        color: #fff;
+        font-size: 1.2rem; /* Increased font size */
+      }
+
+      /* Media Queries for Responsiveness */
+
+      /* Mobile Devices (less than 768px) */
+      @media (max-width: 768px) {
+        header {
+          height: 150px;
+        }
+
+        header h1 {
+          font-size: 2rem; /* Decreased header size for mobile */
+        }
+
+        .navbar {
+          flex-direction: column; /* Stack navigation links */
+          align-items: center;
+        }
+
+        .navbar a {
+          font-size: 1.2rem; /* Decreased font size */
+          margin: 10px 0;
+        }
+
+        section {
+          padding: 20px 30px; /* Reduced section padding for mobile */
+        }
+
+        h2 {
+          font-size: 2.5rem; /* Decreased font size for smaller screens */
+        }
+
+        h3 {
+          font-size: 1.8rem; /* Decreased font size */
+        }
+
+        p,
+        ul {
+          font-size: 1.1rem; /* Reduced font size for smaller screens */
+        }
+
+        .btn {
+          padding: 12px 25px; /* Reduced padding for smaller screens */
+          font-size: 1.2rem; /* Decreased button font size */
+        }
+
+        footer {
+          font-size: 1rem; /* Decreased footer font size */
+        }
+      }
+
+      /* Tablets (768px to 1024px) */
+      @media (max-width: 1024px) and (min-width: 769px) {
+        header h1 {
+          font-size: 2.5rem; /* Decreased header size for tablet */
+        }
+
+        .navbar a {
+          font-size: 1.3rem; /* Adjust font size for tablet */
+        }
+
+        section {
+          padding: 25px 40px; /* Adjust section padding */
+        }
+
+        h2 {
+          font-size: 3rem; /* Adjust h2 size */
+        }
+
+        h3 {
+          font-size: 1.9rem; /* Adjust h3 size */
+        }
+
+        .btn {
+          padding: 13px 28px; /* Adjust button size */
+          font-size: 1.3rem; /* Adjust button font size */
+        }
+      }
+
+      /* Large Screens (Above 1024px) */
+      @media (min-width: 1025px) {
+        header h1 {
+          font-size: 3.5rem; /* Larger font size for larger screens */
+        }
+
+        .navbar a {
+          font-size: 1.4rem; /* Maintain larger font size */
+        }
+
+        section {
+          padding: 30px 60px; /* Larger padding for desktop */
+        }
+
+        h2 {
+          font-size: 3.5rem; /* Larger heading size */
+        }
+
+        h3 {
+          font-size: 2rem; /* Larger subheading */
+        }
+
+        .btn {
+          padding: 14px 30px; /* Larger buttons */
+          font-size: 1.4rem; /* Larger button font */
+        }
+      }
+      ul {
+        list-style-type: none; /* Optional: Removes default bullet points */
+      }
+      li {
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+      #about {
+        background-color: #4b0082;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div>
+        <h1>Digital Signal Processing</h1>
+      </div>
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="#about-course">About Course</a>
+        <a href="#course-project">Course Project</a>
+      </nav>
+    </header>
+
+    <!-- About the Course Section -->
+    <section id="about-course">
+      <hr style="border: 2px solid #ddd; margin: 20px 0" />
+      <div class="about-course">
+        <h2 id="about">About the Course</h2>
+      </div>
+
+      <h1 style="font-size: 2rem">
+        Digital Signal Processing (DSP) involves analyzing, modifying, and
+        interpreting signals using digital systems. These signals can range from
+        audio and video to sensor data and images.
+      </h1>
+      <br />
+      <h3>1. Mathematical Tools</h3>
+      <ul style="list-style-type: disc">
+        <li>Discrete-time Fourier transform (DTFT).</li>
+        <li>
+          Discrete Fourier transform (DFT) and fast Fourier transform (FFT).
+        </li>
+        <li>Z-transform and its applications.</li>
+        <li>Convolution and correlation.</li>
+      </ul>
+
+      <h3>2. Digital Filters</h3>
+      <p>
+        <strong>Types:</strong> Finite Impulse Response (FIR) and Infinite
+        Impulse Response (IIR) filters. <br />
+        <strong>Design Methods:</strong> Windowing, bilinear transform, and
+        frequency sampling. <br />
+        <strong>Filter Characteristics:</strong> Passband, stopband, cutoff
+        frequency, and ripple.
+      </p>
+
+      <h3>3. DSP Algorithms</h3>
+      <ul style="list-style-type: disc">
+        <li>Signal reconstruction.</li>
+        <li>Spectrum analysis.</li>
+        <li>Noise reduction and cancellation.</li>
+        <li>Compression techniques.</li>
+      </ul>
+
+      <h3>4. Practical Implementation</h3>
+      <ul style="list-style-type: disc">
+        <li>Programming DSP algorithms using MATLAB or DSP processors.</li>
+        <li>Real-time signal processing.</li>
+        <li>Case studies of DSP in real-world applications.</li>
+      </ul>
+    </section>
+
+    <!-- Course Project Section -->
+    <section id="course-project">
+      <hr style="border: 2px solid #ddd; margin: 20px 0" />
+      <div class="about-course">
+        <h2 id="about">Course Project</h2>
+      </div>
+      <h3>Problem Statement</h3>
+
+      <h1 style="font-size: 2rem">
+        Develop an echo cancellation system to reduce background noise in voice
+        communication systems.
+      </h1>
+      <br />
+      <h3>Methodology</h3>
+      <ul style="list-style-type: square">
+        <li>Preprocessing:</li>
+        <p>
+          High-frequency noise and irrelevant components are removed through
+          pre-filtering. The resulting signal is optimized for adaptive noise
+          cancellation.
+        </p>
+
+        <li>Noise Cancellation:</li>
+        <p>
+          An adaptive filter isolates noise by dynamically adjusting its
+          coefficients in real-time. Noise estimation algorithms enhance this
+          process by identifying and eliminating background noise effectively.
+        </p>
+
+        <li>Echo Cancellation:</li>
+        <p>
+          Echo path modeling estimates and suppresses echo components within the
+          signal. Error correction methods minimize residual distortion,
+          ensuring clean echo removal.
+        </p>
+
+        <li>Postprocessing:</li>
+        <p>
+          Speech enhancement techniques improve signal clarity and
+          intelligibility. The enhanced signal is then converted back to analog
+          using a Digital-to-Analog Converter (DAC).
+        </p>
+
+        <li>Output Signal:</li>
+        <p>
+          The final output is a clear, noise- and echo-free speech signal, ready
+          for communication or other applications.
+        </p>
+      </ul>
+      <div style="text-align: center; margin-top: 20px">
+        <a href="./dsp report (1).pdf" target="_blank" class="btn"
+          >Open Report</a
+        >
+        <a href="./dsp final.pdf" target="_blank" class="btn">Open PPT</a>
+      </div>
+
+      <h3>Project Poster</h3>
+      <img src="./Screenshot 2025-01-14 102208.png" alt="Project Poster" />
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Karthik. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>
